@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/Rx';
 
-import { Artist } from '../../Artist';
+import { Artist } from '../Artist';
 
 @Injectable()
 export class SpotifyService {

@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 
 import { SpotifyService } from '../../services/spotify.service';
 
-import { Artist } from '../../../Artist';
+import { Artist } from '../../Artist';
 
 @Component({
     moduleId: module.id,
