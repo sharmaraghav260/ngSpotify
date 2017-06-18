@@ -3,7 +3,6 @@ import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { Artist } from '../Artist';
 
-//declare function SpotifyReq(urlReq: string);
 
 @Injectable()
 export class SpotifyService {
@@ -29,7 +28,7 @@ export class SpotifyService {
     params.set('grant_type', 'client_credentials');
     let body = params.toString();
 
-    return this.http.post('https://accounts.spotify.com/api/token', body, { headers: headers })
+    return this.http.post('https://accounts.spotify.com/api/token', body, { headers: headers } )
       .map(res => res.json());
   }
 
