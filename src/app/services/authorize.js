@@ -1,7 +1,9 @@
 var request = require('request'); // "Request" library
 
+// Sample api request format. Not utilized in this project.
+
 var client_id = '4fc10a5b67254940bad34977d1ceb5ce'; // Your client id
-var client_secret = '3479481f74994186a656d45fa8710b50'; // Your secret
+var client_secret = 'ca6159075f5748ab83aa4928856e59ec'; // Your secret
 
 // your application requests authorization
 var authOptions = {

@@ -8,6 +8,7 @@ import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
   moduleId: module.id,
+  selector: 'artist',
   templateUrl: 'artist.component.html'
 })
 export class ArtistComponent implements OnInit {
@@ -19,17 +20,23 @@ export class ArtistComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.map(params => params['id'])
+    this.route.params
+      .map(params => params['id'])
       .subscribe((id) => {
-        this.service.getArtist(id)
-          .subscribe(artist => {
-            this.artist = artist;
-          })
+        this.service.getToken()
+          .subscribe(data => {
+            this.service.getArtist(id, data.access_token)
+              .subscribe(artist => {
+                this.artist = artist;
+              })
+            this.service.getAlbums(id, data.access_token)
+              .subscribe(albums => {
+                console.log(albums.items)
+                this.albums = albums.items;
+              })
 
-        this.service.getAlbums(id)
-          .subscribe(albums => {
-            this.albums = albums.items;
           })
       })
+
   }
 }
