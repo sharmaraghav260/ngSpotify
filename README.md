@@ -20,3 +20,5 @@ Users can search for:
 npm install - to install all dependencies
 
 npm start - to start the application
+
+![Demo](https://ngspotify-.herokuapp.com)
