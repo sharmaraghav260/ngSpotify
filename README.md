@@ -8,11 +8,11 @@ Utizilizing the Spotify Web API, users will be able to search for music. They ca
 
 Users can search for:
 
-Song names and get a list of songs with the name that they searched for.
+    Song names and get a list of songs with the name that they searched for.
 
-Artist and get a list of songs and albums that the artist owns.
+    Artist and get a list of songs and albums that the artist owns.
 
-Album and get a list of songs in that album
+    Album and get a list of songs in that album
 
 
 # Use
