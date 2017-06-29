@@ -9,7 +9,7 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: 'album.component.html'
 })
 
-export class AlbumComponent implements OnInit{
+export class AlbumComponent implements OnInit {
   id: string;
   album: Album;
 
@@ -18,17 +18,17 @@ export class AlbumComponent implements OnInit{
   }
 
   ngOnInit() {
-        this.route.params
-        .map(params => params['id'])
-        .subscribe((id) => {
-            this.service.getToken()
-            .subscribe(data => {
-                this.service.getAlbum(id, data.access_token)
-                .subscribe(album => {
-                    this.album = album;
-                    console.log(album.tracks)
-                })
-            })
-        })
-    }
+    this.route.params
+      .map(params => params['id'])
+      .subscribe((id) => {
+        this.service.getToken()
+          .subscribe(data => {
+            this.service.getAlbum(id, data.access_token)
+              .subscribe(album => {
+                this.album = album;
+                console.log(album.tracks)
+              })
+          })
+      })
+  }
 }

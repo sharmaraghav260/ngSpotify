@@ -31,6 +31,6 @@ import { SpotifyService } from './services/spotify.service';
   providers: [
     SpotifyService
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
